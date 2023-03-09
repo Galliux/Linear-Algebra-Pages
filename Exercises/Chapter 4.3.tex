@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article}
+
+\title{Ma Spec 100p -- Linjär Algebra -- Kapitel 4.3}
+\author{Samuel Bayley Eriksson}
+%\institute{SIG}
+%\date{\today}
+
+%\usepackage{DefaultPreamble}
+%\usepackage[orientation=landscape,size=a0,scale=1.4,debug,grid]{beamerposter}
+\usepackage{amsfonts, amsmath, amssymb, bm, cellspace,  enumitem, extarrows, graphicx, mathtools, multicol, multirow, parskip, systeme, tabularx, tcolorbox, tikz, tikz-3dplot, varwidth, xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{tasks}
+\sysdelim.. % Defines left and right delimiter for \systeme{}. Change "." to \{ or \[ for example
+
+% LaTeX Configuration
+\arraycolsep=3.75pt
+\let\labelenumi\theenumi
+\renewcommand{\labelenumi}{\alph{enumi})}
+% Defined Commands
+\newlength{\arrow}
+\newcommand*{\loongleftarrow}[1]{
+	\begingroup
+	\settowidth{\arrow}{\scriptsize$#1$}
+	\xleftarrow{\mathmakebox[\arrow]{}}
+	\endgroup
+}
+%\newcommand<>{\alertbold}[1]{\textcolor{red}{\textbf{#1}}}
+%\newcommand<>{\Sfrac}[2]{\text{\sfrac{#1}{#2}}}
+%\newcommand<>{\bvec}[1]{\normalfont\textbf{#1}}
+\newcommand{\bvec}[1]{\normalfont\textbf{#1}}
+%\newcommand<>{\span}[1]{\text{Span\{$#1$\}}}
+%\newcommand<>{\col}[1]{\mathrm{Col\,}#1}
+%\newcommand<>{\nul}[1]{\mathrm{Nul\,}#1}
+%\newcommand<>{\rank}[1]{\mathrm{rank\,}#1}
+%\newcommand<>{\blfootnote}[1]{%
+%  \begingroup
+%  \renewcommand\thefootnote{}\footnote{#1}%
+%  \addtocounter{footnote}{-1}%
+%  \endgroup
+%}
+
+% Task Configuration
+\settasks{label-offset=1em}
+
+%% Beamer Configuration
+%\usefonttheme{serif}
+%% Available fonts: structurebold, structurebolditalic, structuresmallcapsserif, structureitalicsserif, serif, default
+%\usetheme{Madrid}
+%\usecolortheme{orchid}
+%\setbeamertemplate{navigation symbols}{} % Hides navigation symbols
+%\setbeamertemplate{footline}{} % Hides the bottom row of information such as title, institution etc.
+%\setitemize{label=\usebeamertemplate{itemize item}} % Sets the default itemization bullet to beamer default circle. Does not seem to display any bullet if this is not here.
+
+% TColorBox Configuration
+%\tcbuselibrary{skins}
+\tcbuselibrary{most}
+\newtcolorbox{subblock}[2][]{
+code={
+\usebeamercolor{block title}
+\colorlet{titlebg}{block title.bg}
+\colorlet{titlefg}{block title.fg}
+\usebeamercolor{block body}
+\colorlet{bodybg}{block body.bg}
+\colorlet{bodyfg}{block body.fg}
+},
+coltitle=block title.fg, % Text color in title
+colbacktitle=block title.bg, % Background color of title
+colupper=block body.fg, % Text color in body
+colback=block title.bg!10, % Background color of body
+%colframe=red, % Border color
+lower separated=false, % Removes dashed line between upper and lower
+frame empty, % Hides border of body?
+title=#2, % Sets the title to argument 2
+boxrule=0pt,
+rounded corners, % Boolean : Rounded corners
+fonttitle=\large, % Sets font-size for title
+before=\par\medskip\noindent, % Creates spacing before block is started
+%after=\par\medskip\noindent, % Spacing after block is finished
+top=2pt,
+left=0pt, % Sets left indentation
+%math, % Enters math-mode in upper and lower
+%math lower, % Enters math-mode in lower
+%ams gather*, % Enters gather*-mode from amsmath immediately in body
+%box align=center,
+%halign title=left, % Alignment of title
+%halign upper=left, % Alignment of upper
+show bounding box, % Displays bounding box
+#1 % Code for body
+}
+
+% TikZ Configuration
+\usetikzlibrary{angles, arrows.meta, calc, tikzmark}
+\newdimen\numht
+\newdimen\numwd
+\settoheight{\numht}{(}
+\settowidth{\numwd}{0}
+%
+\begin{document}
+
+\end{document}
